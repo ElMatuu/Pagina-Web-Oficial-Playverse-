@@ -40,12 +40,29 @@ section{padding:76px 0}.sectionHead{max-width:740px;margin-bottom:32px}.kicker{c
 @media(max-width:600px){.previewGrid,.storyGrid{grid-template-columns:1fr}.brandHero img{width:46px;height:46px}}
 
 </style>
+<style>
+/* Honest product-status panel: factual status, not a fabricated app screenshot */
+.productStatusPanel{position:relative;width:min(100%,470px);padding:25px;border:1px solid #ffffff2b;border-radius:26px;background:linear-gradient(150deg,#182943,#101827 68%);box-shadow:0 35px 85px #0009}
+.statusPanelTop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.statusLive{display:inline-flex;align-items:center;gap:7px;color:#9be9c0;font-size:11px;font-weight:900}
+.statusLive i{width:7px;height:7px;border-radius:50%;background:#62dfa2;box-shadow:0 0 12px #62dfa2}
+.statusBrand{display:flex;align-items:center;gap:13px;margin:24px 0}
+.statusBrand img{width:57px;height:57px;filter:drop-shadow(0 7px 20px #ff824566)}
+.statusBrand strong{display:block;font-size:23px;letter-spacing:.15em}.statusBrand small{color:var(--muted);font-size:11px;letter-spacing:.08em}
+.statusRows{display:grid;gap:10px}
+.statusRows>div{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #ffffff14;border-radius:14px;background:#ffffff08}
+.statusRows b{display:block;font-size:13px}.statusRows small{display:block;color:var(--muted);font-size:11px;line-height:1.4;margin-top:3px}
+.statusMark{width:28px;height:28px;flex:0 0 28px;display:grid;place-items:center;border-radius:9px;font-weight:1000}
+.statusMark.ready{background:#62dfa21a;color:#79e8b0}.statusMark.progress{background:#62d9e91a;color:#80e8f3}.statusMark.pending{background:#ffbf661a;color:#ffd18f}
+.statusFoot{font-size:11px;color:#9eacc2;margin:15px 0 0;line-height:1.5}
+</style>
+
 </head>
 <body id="top">
 <header><div class="wrap nav">
 <a class="brand" href="#top"><img src="./assets/playverse-icon.svg" alt=""><span>PLAYVERSE</span></a>
 <nav class="navlinks" id="mainNav" aria-label="Navegación principal">
-<a href="#inicio">Inicio</a><a href="#explorar">Explorar</a><a href="#en-vivo">En vivo</a><a href="#comunidad">Comunidad</a><a href="#perfiles">Perfiles</a><a href="#vistas">Vistas</a><a href="#plataformas">Plataformas</a><a href="#descargas">Descargas</a><a href="#ayuda">Ayuda</a>
+<a href="#inicio">Inicio</a><a href="#explorar">Explorar</a><a href="#en-vivo">En vivo</a><a href="#comunidad">Comunidad</a><a href="#perfiles">Perfiles</a><a href="#producto">Producto</a><a href="#plataformas">Plataformas</a><a href="#descargas">Descargas</a><a href="#ayuda">Ayuda</a>
 </nav><div class="navright"><a class="btn small navCta" href="https://playverse-api-bgyg.onrender.com/">Abrir aplicación ↗</a><button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
@@ -55,12 +72,19 @@ section{padding:76px 0}.sectionHead{max-width:740px;margin-bottom:32px}.kicker{c
 <p class="lead">Descubrí jugadores, compartí momentos, encontrá comunidades y conectate con gente que juega lo mismo que vos. PlayVerse reúne tu experiencia social gamer en un solo lugar.</p>
 <div class="actions"><a class="btn" href="https://playverse-api-bgyg.onrender.com/">🚀 Entrar a PlayVerse</a><a class="btn secondary" href="#experiencia">Conocer la experiencia ↓</a></div>
 <p class="micro">Plataforma independiente. Acceso web desde móviles, tablets y computadoras.</p><div class="heroBrandMark"><img src="./assets/playverse-icon.svg" alt=""> IDENTIDAD PROPIA · ARCADE · COMUNIDAD · CREATIVIDAD</div>
-</div><div class="heroVisual" aria-label="Vista conceptual ilustrativa de la interfaz"><div class="aura"></div><div class="mock"><div class="mockScreen">
-<div class="mockTop"><span>PLAYVERSE ✦</span><span>⌕　♧　◉</span></div>
-<div class="mockBanner"><small>TU PRÓXIMA PARTIDA EMPIEZA ACÁ</small><strong>Jugá.<br>Compartí.<br>Conectá.</strong><span>Una comunidad para cada jugador.</span></div>
-<div class="mockGrid"><div class="mockCell"><b>◉ En vivo</b><small>Transmisiones</small></div><div class="mockCell"><b>♧ Comunidad</b><small>Tu gente</small></div><div class="mockCell"><b>♙ Perfil</b><small>Tu identidad</small></div><div class="mockCell"><b>✉ Mensajes</b><small>Conversaciones</small></div></div>
-<div class="mockNav"><span>⌂ Inicio</span><span>⌕ Explorar</span><span>＋ Crear</span><span>♧ Amigos</span><span>♙ Perfil</span></div>
-</div></div></div></section>
+</div><aside class="heroVisual" aria-label="Estado real del producto">
+<div class="productStatusPanel">
+  <div class="statusPanelTop"><span class="previewTag">PLAYVERSE · ESTADO DEL PRODUCTO</span><span class="statusLive"><i></i> Proyecto activo</span></div>
+  <div class="statusBrand"><img src="./assets/playverse-icon.svg" alt="Ícono oficial de PlayVerse"><div><strong>PLAYVERSE</strong><small>Gaming · Community · Live</small></div></div>
+  <div class="statusRows">
+    <div><span class="statusMark ready">✓</span><div><b>Base social y cuentas</b><small>Servicios de cuenta, perfiles y relaciones implementados</small></div></div>
+    <div><span class="statusMark ready">✓</span><div><b>Mensajes y salas</b><small>Servicios persistentes y chat; integración de pantallas en curso</small></div></div>
+    <div><span class="statusMark progress">↻</span><div><b>Experiencia de aplicación</b><small>Integración completa y pruebas en dispositivos pendientes</small></div></div>
+    <div><span class="statusMark pending">…</span><div><b>Streaming en producción</b><small>Requiere credenciales y validación real de extremo a extremo</small></div></div>
+  </div>
+  <p class="statusFoot">Información basada en el estado documentado del código. No es una captura de pantalla ni una demostración simulada.</p>
+</div>
+</aside></section>
 <div class="featureBand"><div class="wrap bandInner"><div class="stat"><strong>🎮 Social</strong><span>Conectá por tus juegos</span></div><div class="stat"><strong>🌐 Multiplataforma</strong><span>Una experiencia adaptable</span></div><div class="stat"><strong>♙ Personal</strong><span>Tu perfil, tu identidad</span></div><div class="stat"><strong>✨ En evolución</strong><span>Mejoras y nuevas funciones</span></div></div></div>
 <section id="experiencia"><div class="wrap"><div class="sectionHead"><div class="kicker">La experiencia</div><h2>Todo lo que pasa alrededor de tus juegos.</h2><p>Una navegación clara y una identidad visual gamer: descubrimiento, comunidad, perfiles y acceso a las funciones sociales desde una misma plataforma.</p></div>
 <div class="grid3">
@@ -72,21 +96,27 @@ section{padding:76px 0}.sectionHead{max-width:740px;margin-bottom:32px}.kicker{c
 <article class="card"><div class="ico">✉</div><h3>Mensajes y conexiones</h3><p>Una experiencia social pensada para mantener el contacto con tu gente.</p><a class="more" href="#conexiones">Ver conexiones →</a></article>
 </div></div></section>
 
-<section id="vistas"><div class="wrap">
-<div class="sectionHead"><div class="kicker">Conocé PlayVerse por dentro</div><h2>Un vistazo a tu próximo espacio gamer.</h2><p>Explorá las áreas que forman la experiencia: tu inicio, tu identidad, tus comunidades y tus herramientas de creador. Estas vistas son representaciones visuales de producto, no capturas tomadas de una versión final publicada.</p></div>
-<div class="previewGrid">
-<article class="previewCard"><img class="previewImage" src="./assets/preview-home.svg" alt="Vista ilustrativa del inicio de PlayVerse con actividad, accesos y comunidad"><div class="previewBody"><span class="previewTag concept">Vista conceptual</span><h3>Un inicio que te conecta</h3><p>Un punto de partida para descubrir actividad, publicaciones, amistades y accesos a las áreas sociales de PlayVerse.</p></div></article>
-<article class="previewCard"><img class="previewImage" src="./assets/preview-profile.svg" alt="Vista ilustrativa de un perfil gamer personalizable"><div class="previewBody"><span class="previewTag concept">Vista conceptual</span><h3>Tu perfil, tu identidad</h3><p>Personalizá portada y tema visual, elegí tus juegos favoritos y compartí tus enlaces de creador.</p></div></article>
-<article class="previewCard"><img class="previewImage" src="./assets/preview-community.svg" alt="Vista ilustrativa de una sala comunitaria con chat"><div class="previewBody"><span class="previewTag concept">Vista conceptual</span><h3>Encontrá tu comunidad</h3><p>Salas multijugador, conversaciones y espacios para reunirte con jugadores que comparten tus intereses.</p></div></article>
+<section id="producto"><div class="wrap">
+<div class="sectionHead"><div class="kicker">El producto real</div><h2>Funciones del proyecto, sin pantallas inventadas.</h2><p>Esta página describe la implementación existente y separa lo que ya tiene base técnica de lo que todavía necesita integración visual, configuración o pruebas. No publicamos capturas que no hayan sido tomadas de la aplicación real.</p></div>
+<div class="storyGrid">
+<article class="storyCard"><div class="ico">♙</div><h3>Cuentas y perfiles</h3><p>Registro e inicio de sesión, perfiles editables y consulta pública de perfiles. La validación completa de todos los flujos de interfaz sigue en curso.</p><small>Servicios de backend implementados</small></article>
+<article class="storyCard"><div class="ico">♧</div><h3>Amigos, seguidores y bloqueos</h3><p>Solicitudes, aceptación, listas de amistades, seguidores y controles para bloquear usuarios.</p><small>Relaciones persistentes implementadas</small></article>
+<article class="storyCard"><div class="ico">✉</div><h3>Mensajes privados</h3><p>Conversaciones entre amistades, historial guardado, no leídos, confirmaciones de lectura y eventos de escritura.</p><small>Servicios y eventos implementados · pruebas de interfaz pendientes</small></article>
+<article class="storyCard"><div class="ico">🎮</div><h3>Salas y chat</h3><p>Salas públicas con capacidad y participantes, controles de acceso y mensajes persistentes por sala.</p><small>Servicios de salas y chat implementados</small></article>
+<article class="storyCard"><div class="ico">🏆</div><h3>Misiones y Tokens</h3><p>Campaña de 22 misiones en cinco capítulos. El progreso se calcula desde actividad registrada y las recompensas se reclaman una sola vez.</p><small>Progreso y recompensas validados por servidor</small></article>
+<article class="storyCard"><div class="ico">✨</div><h3>Tienda e inventario</h3><p>Catálogo de cosméticos, inventario, movimientos de Tokens y compras/equipamiento virtual validados por servidor. Sin pagos reales habilitados.</p><small>Base de tienda implementada</small></article>
+<article class="storyCard"><div class="ico">🔔</div><h3>Notificaciones</h3><p>Centro persistente para solicitudes, amistades aceptadas y mensajes privados, con contador y estado de lectura.</p><small>Servicio implementado</small></article>
+<article class="storyCard"><div class="ico">♿</div><h3>Accesibilidad</h3><p>Preferencias de reducción de movimiento y alto contraste guardadas por cuenta.</p><small>Preferencias implementadas</small></article>
+<article class="storyCard"><div class="ico">📡</div><h3>Transmisiones</h3><p>La integración técnica de LiveKit y los flujos de emisión/reproducción existen en el código, pero la función sigue deshabilitada hasta configurar el servicio y completar pruebas reales en navegador y dispositivos.</p><small>En integración · no verificado en producción</small></article>
 </div>
-<div class="previewNote">Las imágenes de esta sección son maquetas originales diseñadas para explicar la propuesta. No son capturas reales ni garantizan que cada pantalla esté terminada o habilitada en producción.</div>
+<div class="previewNote">Capturas reales: todavía no disponibles para publicación. Para incorporarlas hace falta ejecutar una versión identificable de la aplicación, iniciar sesión con cuentas de prueba y capturar cada pantalla en funcionamiento. Hasta entonces, esta web no muestra maquetas como si fueran pantallas reales.</div>
 </div></section>
-<section id="explorar"><div class="wrap split"><div class="panel"><div class="kicker">01 · Descubrimiento</div><h3>Explorá nuevas partidas y personas.</h3><p>La zona de exploración está pensada para encontrar contenido y jugadores sin perderte entre menús.</p><ul><li>Descubrimiento de perfiles gamer.</li><li>Acceso a publicaciones y novedades.</li><li>Atajos hacia comunidades y áreas sociales.</li><li>Diseño adaptable a pantallas táctiles y escritorio.</li></ul><a class="btn small" href="https://playverse-api-bgyg.onrender.com/">Abrir PlayVerse ↗</a></div><div class="art"><strong>EXPLORAR<br><span class="grad">Encontrá tu squad.</span></strong></div></div></section>
-<section id="en-vivo"><div class="wrap split"><div class="art"><strong>EN VIVO<br><span class="grad">La partida continúa.</span></strong></div><div class="panel"><div class="kicker">02 · Streaming</div><h3>Compartí el momento.</h3><p>PlayVerse contempla experiencias de streaming, salas y comunicación en tiempo real mediante su integración de servicios.</p><ul><li>Área de transmisiones y salas.</li><li>Experiencia de visualización social.</li><li>Integración técnica preparada para LiveKit.</li><li>La transmisión real requiere credenciales y pruebas de conexión.</li></ul><div class="notice">No se muestra una transmisión falsa: la disponibilidad en vivo depende de que el servicio de streaming esté configurado y operativo.</div></div></div></section>
-<section id="comunidad"><div class="wrap"><div class="sectionHead"><div class="kicker">03 · Comunidad</div><h2>Encontrá tu lugar. Sumá a tu gente.</h2><p>La comunidad es el centro de PlayVerse: participar, descubrir intereses compartidos y hacer crecer tu círculo gamer.</p></div><div class="grid3">
-<article class="card"><div class="ico">♧</div><h3>Grupos y espacios</h3><p>Un punto de encuentro para organizar intereses, juegos y conversaciones.</p></article>
+<section id="explorar"><div class="wrap split"><div class="panel"><div class="kicker">01 · Descubrimiento</div><h3>Explorá nuevas partidas y personas.</h3><p>El código incluye perfiles públicos, publicaciones y relaciones entre cuentas. La experiencia completa de descubrimiento y su integración visual siguen en desarrollo.</p><ul><li>Consulta de perfiles públicos y relaciones entre usuarios.</li><li>Publicaciones, comentarios y reacciones persistentes en el backend.</li><li>La pantalla integral de exploración todavía requiere integración y validación.</li><li>Diseño web adaptable a pantallas táctiles y escritorio.</li></ul><a class="btn small" href="https://playverse-api-bgyg.onrender.com/">Abrir PlayVerse ↗</a></div><div class="art"><strong>EXPLORAR<br><span class="grad">Encontrá tu squad.</span></strong></div></div></section>
+<section id="en-vivo"><div class="wrap split"><div class="art"><strong>EN VIVO<br><span class="grad">La partida continúa.</span></strong></div><div class="panel"><div class="kicker">02 · Streaming</div><h3>Compartí el momento.</h3><p>La aplicación contiene integración técnica de LiveKit y flujos de emisión y reproducción. No se anuncia como servicio disponible: faltan credenciales operativas y pruebas reales de extremo a extremo.</p><ul><li>Área de transmisiones y salas.</li><li>Experiencia de visualización social.</li><li>Creación autenticada de sesiones y tokens de corta duración.</li><li>La emisión y reproducción requieren configurar LiveKit y validar cámara, micrófono, pantalla y dispositivos.</li></ul><div class="notice">No se muestra una transmisión falsa: la disponibilidad en vivo depende de que el servicio de streaming esté configurado y operativo.</div></div></div></section>
+<section id="comunidad"><div class="wrap"><div class="sectionHead"><div class="kicker">03 · Comunidad</div><h2>Encontrá tu lugar. Sumá a tu gente.</h2><p>La base social actual permite conectar cuentas, seguir perfiles y reunirse en salas. Las comunidades completas con roles, membresías y moderación todavía están en desarrollo.</p></div><div class="grid3">
+<article class="card"><div class="ico">🎮</div><h3>Salas multijugador</h3><p>Salas públicas con capacidad, participantes y chat persistente para organizar partidas.</p></article>
 <article class="card"><div class="ico">♙</div><h3>Jugadores</h3><p>Conocé perfiles y conectá con personas de tu comunidad.</p></article>
-<article class="card"><div class="ico">✦</div><h3>Actividad</h3><p>Seguí novedades y descubrí lo que comparte tu entorno gamer.</p></article>
+<article class="card"><div class="ico">✦</div><h3>Comunidades completas</h3><p>Los clubs con roles, membresías y herramientas de moderación todavía no están implementados.</p></article>
 </div></div></section>
 
 <section id="mas-funciones"><div class="wrap">
@@ -103,10 +133,10 @@ section{padding:76px 0}.sectionHead{max-width:740px;margin-bottom:32px}.kicker{c
 <article class="storyCard"><div class="ico">📡</div><h3>Herramientas para creadores</h3><p>Preferencias de calidad, FPS, bitrate, cámara, micrófono, audio del sistema y diseño de overlay. La emisión real aún necesita configuración y pruebas.</p><small>Preparación técnica · no producción verificada</small></article>
 </div>
 </div></section>
-<section id="perfiles"><div class="wrap split"><div class="panel"><div class="kicker">04 · Identidad</div><h3>Un perfil que habla de vos.</h3><p>Los perfiles gamer de PlayVerse contemplan opciones de personalización para que cada jugador pueda mostrar su identidad.</p><ul><li>Imagen de portada.</li><li>Temas visuales: Arcade, Neon, Minimal y Esports.</li><li>Hasta ocho juegos favoritos.</li><li>Enlaces a YouTube, Twitch y TikTok.</li></ul><a class="btn small" href="https://playverse-api-bgyg.onrender.com/">Ver la aplicación ↗</a></div><div class="art"><strong>TU PERFIL<br><span class="grad">Tu estilo. Tus juegos.</span></strong></div></div></section>
+<section id="perfiles"><div class="wrap split"><div class="panel"><div class="kicker">04 · Identidad</div><h3>Un perfil que habla de vos.</h3><p>La API permite editar perfiles y consultar perfiles públicos. Las opciones visuales y su recorrido completo deben verificarse en la aplicación antes de presentarse como una experiencia terminada.</p><ul><li>Edición de datos de perfil y consulta pública.</li><li>Preferencias y opciones de identidad en evolución.</li><li>La validación de cada ajuste visual en la interfaz sigue pendiente.</li></ul><a class="btn small" href="https://playverse-api-bgyg.onrender.com/">Ver la aplicación ↗</a></div><div class="art"><strong>TU PERFIL<br><span class="grad">Tu estilo. Tus juegos.</span></strong></div></div></section>
 <section id="conexiones"><div class="wrap"><div class="sectionHead"><div class="kicker">05 · Herramientas sociales</div><h2>Accesos que te mantienen conectado.</h2><p>Los módulos y accesos se presentan como parte de una experiencia coherente. Las funciones interactivas de la aplicación se abren desde el producto, no desde botones decorativos en esta web.</p></div><div class="grid4">
 <article class="card"><div class="ico">✉</div><h3>Chat</h3><p>Acceso a conversaciones y comunicación con otros jugadores.</p><a class="more" href="https://playverse-api-bgyg.onrender.com/">Abrir aplicación →</a></article>
-<article class="card"><div class="ico">🔔</div><h3>Notificaciones</h3><p>Un espacio para novedades y actividad relevante.</p><a class="more" href="https://playverse-api-bgyg.onrender.com/">Abrir aplicación →</a></article>
+<article class="card"><div class="ico">🔔</div><h3>Notificaciones</h3><p>Centro persistente para solicitudes, aceptaciones y mensajes privados; la pantalla debe validarse en uso real.</p><a class="more" href="https://playverse-api-bgyg.onrender.com/">Abrir aplicación →</a></article>
 <article class="card"><div class="ico">🎮</div><h3>Juegos favoritos</h3><p>Mostrá los juegos que forman parte de tu identidad gamer.</p><a class="more" href="#perfiles">Ver perfiles →</a></article>
 <article class="card"><div class="ico">⚙</div><h3>Preferencias</h3><p>Una experiencia que puede adaptarse a cada usuario y dispositivo.</p><a class="more" href="https://playverse-api-bgyg.onrender.com/">Abrir aplicación →</a></article>
 </div></div></section>
@@ -128,13 +158,13 @@ section{padding:76px 0}.sectionHead{max-width:740px;margin-bottom:32px}.kicker{c
 <details><summary>¿PlayVerse es Omlet Arcade?</summary><p>No. PlayVerse es un proyecto independiente con identidad propia. Toma inspiración de la experiencia social gamer, pero no se presenta como el producto oficial de Omlet Arcade ni utiliza su marca.</p></details>
 <details><summary>¿Dónde descargo el APK?</summary><p>El enlace aparecerá en la sección Descargas cuando exista un APK oficial firmado y verificado. Hoy no hay un APK publicado desde esta web.</p></details>
 <details><summary>¿Dónde descargo el instalador de Windows?</summary><p>El instalador EXE aparecerá cuando el build de Windows esté terminado, probado y publicado como release.</p></details>
-<details><summary>¿Puedo usar PlayVerse ahora?</summary><p>Podés abrir la aplicación web desde el botón “Abrir PlayVerse”. Las funciones que dependan de servicios externos pueden requerir configuración adicional.</p></details>
+<details><summary>¿Puedo usar PlayVerse ahora?</summary><p>La aplicación web tiene una base de autenticación y servicios sociales en desarrollo. La integración de todas las pantallas y la validación completa en producción todavía están pendientes; algunas funciones requieren servicios externos configurados.</p></details>
 <details><summary>¿La web se actualizará automáticamente?</summary><p>El sitio está separado en su propio repositorio y se publicará desde ahí. Con el despliegue automático habilitado, cada actualización aprobada de la rama principal podrá reflejarse en la web.</p></details>
-<details><summary>¿Las imágenes muestran la app real?</summary><p>Las vistas de producto actuales son maquetas conceptuales identificadas como tales. Las capturas reales se incorporarán cuando podamos obtenerlas de una versión ejecutándose y validada en dispositivos.</p></details>
+<details><summary>¿Dónde puedo ver capturas reales?</summary><p>La galería de capturas reales se publicará cuando las pantallas se hayan obtenido de una versión de PlayVerse en ejecución y se hayan validado. No usamos imágenes ilustrativas para hacerlas pasar por la aplicación.</p></details>
 </div></div></section>
 <div class="wrap" style="padding:0 0 76px"><div class="downloadBox"><div><h2>Tu comunidad te está esperando.</h2><p>Entrá a PlayVerse y empezá a construir tu mundo gamer.</p></div><div class="downloadActions"><a class="btn" href="https://playverse-api-bgyg.onrender.com/">Abrir PlayVerse ↗</a><a class="btn secondary" href="#descargas">Ver descargas</a></div></div></div>
 </main>
-<footer class="footer"><div class="wrap"><div class="footgrid"><div><a class="brand" href="#top"><img src="./assets/playverse-icon.svg" alt=""><span>PLAYVERSE</span></a><p>Una comunidad gamer independiente para descubrir, compartir y conectar.</p></div><div><h4>Explorar</h4><a href="#experiencia">Experiencia</a><a href="#vistas">Vistas de producto</a><a href="#mas-funciones">Funciones</a><a href="#explorar">Descubrimiento</a><a href="#en-vivo">En vivo</a><a href="#comunidad">Comunidad</a></div><div><h4>Ayuda y descargas</h4><a href="#plataformas">Plataformas</a><a href="#descargas">Descargas</a><a href="#instalacion">Instalación</a><a href="#ayuda">Preguntas frecuentes</a></div></div><div class="copyright"><span>© <span id="year"></span> PLAYVERSE. Proyecto independiente.</span><a href="#top">Volver arriba ↑</a></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footgrid"><div><a class="brand" href="#top"><img src="./assets/playverse-icon.svg" alt=""><span>PLAYVERSE</span></a><p>Una comunidad gamer independiente para descubrir, compartir y conectar.</p></div><div><h4>Explorar</h4><a href="#experiencia">Experiencia</a><a href="#producto">Estado del producto</a><a href="#mas-funciones">Funciones</a><a href="#explorar">Descubrimiento</a><a href="#en-vivo">En vivo</a><a href="#comunidad">Comunidad</a></div><div><h4>Ayuda y descargas</h4><a href="#plataformas">Plataformas</a><a href="#descargas">Descargas</a><a href="#instalacion">Instalación</a><a href="#ayuda">Preguntas frecuentes</a></div></div><div class="copyright"><span>© <span id="year"></span> PLAYVERSE. Proyecto independiente.</span><a href="#top">Volver arriba ↑</a></div></div></footer>
 <script>
 const menu=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';});
